@@ -1,0 +1,204 @@
+body {
+  background-color: rgb(255, 255, 255);
+  padding-top: 70px;
+}
+
+.navbar a:hover {
+  background-color: #5cacc0;
+  color: white;
+}
+
+/* for 3d text */
+.h1 {
+
+  text-transform: uppercase;
+  font-family: verdana;
+
+  font-weight: 700;
+  color: #000000;
+  text-shadow: 1px 1px 1px #ffffff,
+    1px 2px 1px #ffffff,
+    1px 22px 10px rgba(16, 16, 16, 0.2),
+    1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+
+}
+
+
+/* .h1{
+  filter: drop-shadow(1rem 1rem 1rem );
+  
+} */
+
+
+.color1 {
+
+  /* For browsers that do not support gradients */
+  /* background-image: linear-gradient(to bottom right, rgb(29, 128, 185), rgb(191, 191, 191)); */
+  background-color: #d0e2ec;
+}
+
+.color2 {
+  background-color: #ffffff;
+}
+
+.height200 {
+  height: 200px;
+  overflow-y: hidden;
+  /* overflow-x: hidden; */
+}
+
+.card {
+  height: 100%;
+  /* filter: drop-shadow(1rem 1rem 0.75rem rgb(101, 152, 207)); */
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+/* For Shadow  */
+.dropshadow {
+  filter: drop-shadow(20px 20px 20px rgb(116, 116, 116));
+}
+
+
+.justify {
+  text-align: justify;
+  padding: 10px;
+
+}
+
+
+
+
+/* for social media card */
+
+::selection {
+  color: #fff;
+  background: #1cc7d0;
+}
+
+.wrapper {
+  height: 400px;
+  width: 240px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.wrapper .card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.wrapper:hover>.front-face {
+  transform: rotateY(-180deg);
+}
+
+.wrapper .card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.wrapper .back-face {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+
+.wrapper:hover>.back-face {
+  transform: rotateY(0deg);
+}
+
+.wrapper .back-face img {
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+.wrapper .back-face .info {
+  text-align: center;
+}
+
+.back-face .info .title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.back-face ul {
+  display: flex;
+}
+
+.back-face ul a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+  transition: all 0.5s ease;
+}
+
+.back-face ul a:hover {
+  color: #1cc7d0;
+  border-color: #1cc7d0;
+  background: linear-gradient(375deg, transparent, transparent);
+}
+
+
+
+/* for header sliding animation name */
+h2 {
+  position: relative;
+  font-size: 2rem;
+  font-family: sans-serif;
+  -webkit-text-stroke: 0.1vw #383d52;
+  text-transform: uppercase;
+}
+
+h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: #4fed51;
+
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid #4fed51;
+  overflow: hidden;
+  /* transition:animate 6s linear infinite; */
+  animation: animate 6s linear infinite;
+
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+
+  70% {
+    width: 100%;
+  }
+}
