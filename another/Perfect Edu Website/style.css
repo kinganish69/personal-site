@@ -1,0 +1,56 @@
+
+
+.slide-images {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    /* display: flex; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.company-logo {
+    width: 150px;
+}
+
+.gradient-background {
+    background-color: red;
+    /* For browsers that do not support gradients */
+    /* background-image: linear-gradient(to bottom right, rgb(29, 128, 185), rgb(191, 191, 191)); */
+    background-color: #deeaf0;
+}
+
+.card-anish{
+    /* display: flex; */
+    margin-left: auto;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.aboutmeimage{
+    height: 300px;
+
+
+}
+
+.active{
+    text-transform: uppercase;
+
+}
+.imageheight{
+    max-height: 300px;
+    overflow: hidden;
+    position: top;
+}
+
+.overflownotscroll{
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-height{
+    height: 100px;
+
+}
