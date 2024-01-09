@@ -79,6 +79,8 @@ span {
     cursor: pointer;
     margin-left: 25px;
     display: none;
+    right: 40px;
+    position: absolute;
 }
 
 section {
@@ -517,18 +519,19 @@ form textarea {
         position: absolute;
         top: -1000px;
         right: 0;
-        left: 0;
+        width: 0;
         display: flex;
         flex-direction: column;
         background: var(--bg-color);
         text-align: left;
         transition: all .45s ease;
-
+        border-radius: 20px; /* Adding border-radius */
+        overflow: hidden;
     }
     .navlist a{
         display: block;
         margin: 17px;
-        font-size: 20px;
+        font-size: 15px;
         transition: all .45s ease;
         color: var(--text-color);
 
@@ -541,5 +544,6 @@ form textarea {
     }
     .navlist.open{
         top: 100%;
+        width: 50%;
     }
 }
